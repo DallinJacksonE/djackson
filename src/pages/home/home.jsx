@@ -9,8 +9,8 @@ export function Home() {
           className="object-cover object-center w-full h-full" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <h1 className="text-4xl text-white font-bold">Hello, World!</h1>
-          <p className="text-xl text-white mt-4">This is a text</p>
+          <h1 className="text-4xl text-white font-bold">Dallin Jackson</h1>
+          <p className="text-xl text-white mt-4">Work wtih me</p>
         </div>
       </div>
     </>
