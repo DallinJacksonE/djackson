@@ -7,7 +7,7 @@ export function Blog() {
   const [selectedPost, setSelectedPost] = useState(null);
 
   const modules = import.meta.glob('./posts/*.md?raw', { eager: true });
-
+  console.log(modules);
   const posts = Object.entries(modules)
     .map(([path, rawContent]) => {
       const { content, data } = matter(rawContent);
