@@ -3,18 +3,16 @@ import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-export const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
+export function Blog() {
+  const [selectedPost, setSelectedPost] = useState(null);
 
-  const modules = import.meta.glob('./projectEntries/md?raw', { eager: true });
-  console.log(modules);
-  console.log("Hello");
-  const projects = Object.entries(modules)
+  const modules = import.meta.glob('./posts/*.md?raw', { eager: true });
+
+  const posts = Object.entries(modules)
     .map(([path, rawContent]) => {
       const { content, data } = matter(rawContent);
       const fileName = path.split('/').pop().split('?')[0].replace('.md', '');
       const dateMatch = fileName.match(/^(\d{4}-\d{2}-\d{2})/);
-      console.log(`File ${fileName} is loaded.`)
       return {
         slug: fileName,
         title: data.title || fileName.replace(dateMatch?.[0] || '', '').trim(),
@@ -24,22 +22,22 @@ export const Projects = () => {
     })
     .sort((a, b) => b.date.localeCompare(a.date));
 
-  if (selectedProject) {
+  if (selectedPost) {
     return (
       <div>
-        <button onClick={() => setSelectedProject(null)} style={{ marginBottom: '20px' }}>← Back</button>
+        <button onClick={() => setSelectedPost(null)} style={{ marginBottom: '20px' }}>← Back</button>
         <h1>{selectedPost.title}</h1>
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{selectedProject.content}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{selectedPost.content}</ReactMarkdown>
       </div>
     );
   }
 
   return (
     <div>
-      {projects.map((post) => (
+      {posts.map((post) => (
         <div
           key={post.slug}
-          onClick={() => setSelectedProject(post)}
+          onClick={() => setSelectedPost(post)}
           style={{
             border: '1px solid #ccc',
             margin: '10px 0',
