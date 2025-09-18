@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import './fileDisplayStyles.css';
 
 export function FileDisplay({ directoryName, mdDirectoryName }) {
   const [selectedPost, setSelectedPost] = useState(null);
@@ -34,12 +35,24 @@ export function FileDisplay({ directoryName, mdDirectoryName }) {
 
   if (selectedPost) {
     return (
-      <div>
-        <button onClick={() => setSelectedPost(null)} style={{ marginBottom: '20px' }}>
-          ← Back
-        </button>
-        <h1>{selectedPost.title}</h1>
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{selectedPost.content}</ReactMarkdown>
+      <div id={'postContainer'}>
+        <div id={'buttonContainer'}>
+          <button onClick={() => setSelectedPost(null)} style={{
+            marginBottom: '20px',
+            cursor: 'pointer',
+            border: '1px solid #ccc',
+            borderRadius: '6px',
+            padding: '3px',
+          }}
+            id={'backPostButton'}>
+            ← Back
+          </button>
+        </div>
+        <div id={'postContent'}>
+          <h1>{selectedPost.title}</h1>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{selectedPost.content}</ReactMarkdown>
+
+        </div>
       </div>
     );
   }
@@ -53,7 +66,7 @@ export function FileDisplay({ directoryName, mdDirectoryName }) {
           onClick={() => setSelectedPost(post)}
           style={{
             border: '1px solid #ccc',
-            margin: '10px 0',
+            margin: '10px',
             padding: '15px',
             borderRadius: '8px',
             cursor: 'pointer',

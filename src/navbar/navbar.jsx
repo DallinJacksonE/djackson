@@ -3,6 +3,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link, useLocation } from 'react-router-dom'
 
 const navigation = [
+  { name: 'Home', href: '/', current: false },
   { name: 'Projects', href: '/projects', current: false },
   { name: 'Blog', href: '/blog', current: false },
   { name: 'Resume', href: '/resume', current: false },
@@ -33,13 +34,7 @@ export function Navbar() {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex shrink-0 items-center">
-              <img
-                alt="Your Company"
-                src="/favicon.png"
-                className="h-8 w-auto"
-              />
-            </div>
+
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
@@ -72,7 +67,7 @@ export function Navbar() {
               to={item.href}
               aria-current={location.pathname === item.href ? 'page' : undefined}
               className={classNames(
-                location.pathname === item.href ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white',
+                location.pathname === item.href ? 'bg-black-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white',
                 'block rounded-md px-3 py-2 text-base font-medium'
               )}
             >
