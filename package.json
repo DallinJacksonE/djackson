@@ -16,6 +16,7 @@
     "gray-matter": "^4.0.3",
     "headlessui": "^0.0.0",
     "markdown-to-jsx": "^7.7.13",
+    "nvm": "^0.0.4",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-markdown": "^10.1.0",
