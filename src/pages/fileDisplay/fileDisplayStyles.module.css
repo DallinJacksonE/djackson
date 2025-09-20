@@ -1,19 +1,9 @@
 
-
-#postContainer {
-  margin: 10px;
+.markdown {
+  display: block
 }
 
-#buttonContainer {
-
-}
-
-#postContent {
-  margin: 0 auto; 
-  max-width: 60em;
-}
-
-h1 {
+.markdown h1 {
   display: block;
   font-size: 2em;
   margin-top: 0.67em;
@@ -24,7 +14,7 @@ h1 {
 }
 
 
-h2 {
+.markdown h2 {
   display: block;
   font-size: 1.5em;
   margin-top: 0.83em;
@@ -34,7 +24,7 @@ h2 {
   font-weight: bold;
 }
 
-h3 {
+.markdown h3 {
   display: block;
   font-size: 1.17em;
   margin-top: 1em;
@@ -44,6 +34,6 @@ h3 {
   font-weight: bold;
 }
 
-img {
+.markdown img {
   margin: 10px;
 }

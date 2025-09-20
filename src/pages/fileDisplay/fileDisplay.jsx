@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import './fileDisplayStyles.css';
+import style from './fileDisplayStyles.module.css';
 
 export function FileDisplay({ directoryName, mdDirectoryName }) {
   const [selectedPost, setSelectedPost] = useState(null);
@@ -48,9 +48,12 @@ export function FileDisplay({ directoryName, mdDirectoryName }) {
             ← Back
           </button>
         </div>
-        <div id={'postContent'}>
+        <div id={'postContent'} className={style.markdown}>
           <h1>{selectedPost.title}</h1>
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{selectedPost.content}</ReactMarkdown>
+          <ReactMarkdown 
+            remarkPlugins={[remarkGfm]}
+            children={selectedPost.content}
+          />
 
         </div>
       </div>

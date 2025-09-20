@@ -1,1 +1,17 @@
+img {
+  margin: 0px;
+}
+
+#postContainer {
+  margin: 10px;
+}
+
+#buttonContainer {
+
+}
+
+#postContent {
+  margin: 0 auto; 
+  max-width: 60em;
+}
 
