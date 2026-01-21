@@ -55,8 +55,8 @@ website did run offically for awhile, but my sister came to college and she
 isn't able to keep up the plushie business. The website is no longer up, but
 here are some photos of it.
 
-![Kaylie's Creations Homepage](/kcreationsHome.png)
-![Login Page](/kcreationsLogin.png)
+![Kaylie's Creations Homepage](/images/kcreationsHome.png)
+![Login Page](/images/kcreationsLogin.png)
 
 
 

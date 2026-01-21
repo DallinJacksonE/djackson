@@ -13,8 +13,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/projects' element={<Projects />} />
-        <Route path='/blog' element={<Blog />} />
+        <Route path='/projects/:slug?' element={<Projects />} />
+        <Route path='/blog/:slug?' element={<Blog />} />
         <Route path='/resume' element={<Resume />} />
         <Route path='*' element={<NotFound />} />
       </Routes >

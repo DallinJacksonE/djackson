@@ -9,7 +9,7 @@ offered a position as a Research Assistant in a Lab one of my professors
 oversaw. There are a few projects I did working in the Machine Shop that I want
 to remember.
 
-![In Shop](/shopPhotos/inSHop.jpg)
+![In Shop](/images/shopPhotos/inSHop.jpg)
 
 ### Animal Mouth Separators
 
@@ -28,8 +28,8 @@ Made a fly cutter out of some steel stock. Wasn't the hardest material, but the
 three screw clamps did a good job holding the tool. Gave great finishes to flat
 surfaces I used it on.
 
-![Fly Cutter Body](/shopPhotos/flyCutterBody.jpeg)
-![Fly Cutter](/shopPhotos/assembledFlyCutter.jpeg)
+![Fly Cutter Body](/images/shopPhotos/flyCutterBody.jpeg)
+![Fly Cutter](/images/shopPhotos/assembledFlyCutter.jpeg)
 
 
 ### Tow Truck Crane
@@ -40,7 +40,7 @@ of the truck, which took a couple guys to get down. It was an awkward, elbow
 smacking process. We made two arm/cranes that held the wheel dollies and mounted
 to the bed of the truck.
 
-![Dollie Crane](/shopPhotos/towTruckCrane.jpeg)
+![Dollie Crane](images/shopPhotos/towTruckCrane.jpeg)
 
 
 ### Cutting Oil Brush Cup
@@ -52,18 +52,18 @@ the part. We were working on an order that needed a lot of turned parts, and we
 were getting tired of stealing the thimble of oil from each other. I drew up
 some plans and presented them to my boss.
 
-![oilCup Drawings](/shopPhotos/coolantBrushes/coolantDiagram.jpeg)
+![oilCup Drawings](/images/shopPhotos/coolantBrushes/coolantDiagram.jpeg)
 
 Having a cone shaped bottom heavy design was important - we had all spilled the
 cutting oil thimble on the machines or our toolboxes. It also needed to be able to
 hold a brush. My boss gave me the go-ahead and I made four.
 
-![oilCup](/shopPhotos/coolantBrushes/coolantBrush.jpeg)
+![oilCup](/images/shopPhotos/coolantBrushes/coolantBrush.jpeg)
 
 To finish I put them in Aluminum Black, which is a chemical that oxidizes the
 aluminum.
 
-![Finished Oil Cup](/shopPhotos/coolantBrushes/finishedOil.jpeg)
+![Finished Oil Cup](/images/shopPhotos/coolantBrushes/finishedOil.jpeg)
 
 ### Learning How to Weld
 
@@ -73,6 +73,6 @@ dumpster. I cut some parts and sanded the paint off the scraps, then made a
 campfire grill. I did season it in my oven until it had a black cast iron look,
 and it has worked amazingly on campouts.
 
-![Campgrill](/shopPhotos/campFireRack.jpeg)
+![Campgrill](/images/shopPhotos/campFireRack.jpeg)
 
 

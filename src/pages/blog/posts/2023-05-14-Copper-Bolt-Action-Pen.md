@@ -25,4 +25,4 @@ helped me avoid that.
 This has been one of my favorite projects so far, I really love the shine, and
 as it ages it will turn a nice dull brown and green, which will be fun to see.
 
-![Copper Pen](/shopPhotos/copperBoltActionPen.jpeg)
+![Copper Pen](/images/shopPhotos/copperBoltActionPen.jpeg)
