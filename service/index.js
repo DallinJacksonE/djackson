@@ -11,9 +11,9 @@ app.use(express.static(path.join(__dirname, '../dist')));
 app.use(express.json());
 app.set('trust proxy', true)
 
-// app.get("*", (req, res) => {
-//   res.sendfile(path.join(__dirname, '../dist/index.html'));
-// });
+app.get(/^.*$/, (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
+});
 
 server.listen(port, () => {
   console.log(`Server running on port:${port}`);
