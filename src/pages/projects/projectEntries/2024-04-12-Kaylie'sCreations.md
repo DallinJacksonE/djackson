@@ -41,17 +41,20 @@ the order status, keep records of the fulfilled orders, and have the mailing
 addresses of her clients on easy access. Other functionality included:
 
 
-* [x] photos of her new plushies to the shop
-* [x] setting products to in stock or out of stock
+* [x] gallery of photos showcasing new plushies to the shop
+* [x] working webstore where users can place orders on in stock items
 * [x] working integration with Square pay so clients could pay online
 * [x] encrypted user data
+* [x] order tracking
+* [x] admin tools for listing new products, stock, and order fulfillment
+* [x] user tools for seeing order fulfillment and order history
 * [x] links to her social media and a calendar for the markets she would attend
 
 
 The store was something I learned a lot from. If I hadn't gone for such a big
 goal, I wouldn't have been able to take as much as a deep dive as I did. The
-repo of my work is [here](https://github.com/DallinJacksonE/startup260). The
-website did run offically for awhile, but my sister came to college and she
+repo of my work is at github.com/DallinJacksonE/startup260. The
+website did run offically, but my sister came to college and she
 isn't able to keep up the plushie business. The website is no longer up, but
 here are some photos of it.
 
