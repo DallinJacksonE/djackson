@@ -1,17 +1,67 @@
-img {
+@reference "tailwindcss";
+
+#postContent img {
   margin: 0px;
+  @apply rounded-xl shadow-sm mx-auto my-6 border border-slate-200;
 }
 
 #postContainer {
-  margin: 10px;
+  @apply min-h-screen bg-slate-50 py-10 px-4 sm:px-6 lg:px-8 flex flex-col;
 }
 
 #buttonContainer {
-
+  @apply max-w-4xl mx-auto w-full mb-6;
 }
 
 #postContent {
-  margin: 0 auto; 
-  max-width: 60em;
+  @apply mx-auto max-w-4xl w-full bg-white p-6 sm:p-12 rounded-2xl shadow-sm border border-slate-200 mb-10 flex-grow;
 }
 
+/* Beautiful Markdown Formatting via Tailwind @apply */
+#postContent h2 {
+  @apply text-2xl sm:text-3xl font-bold text-slate-800 mt-12 mb-6 tracking-tight;
+}
+
+#postContent h3 {
+  @apply text-xl sm:text-2xl font-semibold text-slate-800 mt-8 mb-4 tracking-tight;
+}
+
+#postContent p {
+  @apply text-slate-600 leading-relaxed mb-6 text-lg;
+}
+
+#postContent a {
+  @apply text-blue-600 font-medium hover:text-blue-800 underline underline-offset-4 transition-colors;
+}
+
+#postContent ul {
+  @apply list-disc list-outside mb-6 ml-6 space-y-2 text-slate-600 text-lg marker:text-slate-400;
+}
+
+#postContent ol {
+  @apply list-decimal list-outside mb-6 ml-6 space-y-2 text-slate-600 text-lg marker:text-slate-400;
+}
+
+#postContent li {
+  @apply pl-2;
+}
+
+#postContent pre {
+  @apply bg-slate-900 text-slate-50 p-5 rounded-xl overflow-x-auto mb-8 text-sm shadow-inner;
+}
+
+#postContent code {
+  @apply bg-slate-100 text-blue-600 px-1.5 py-0.5 rounded-md text-sm font-mono border border-slate-200;
+}
+
+#postContent pre code {
+  @apply bg-transparent text-slate-50 p-0 border-none font-mono;
+}
+
+#postContent blockquote {
+  @apply border-l-4 border-blue-500 bg-slate-50 p-5 rounded-r-xl italic text-slate-700 mb-8;
+}
+
+#postContent input[type="checkbox"] {
+  @apply w-4 h-4 text-blue-600 bg-slate-100 border-slate-300 rounded focus:ring-blue-500 mt-1 cursor-pointer;
+}

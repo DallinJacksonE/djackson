@@ -4,7 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
-#root {
-  height: 100vh;
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  @apply antialiased text-slate-900 bg-slate-50 font-sans;
+}
+
+#root {
+  @apply min-h-screen flex flex-col;
+}

@@ -65,7 +65,7 @@ export function FileDisplay({ directoryName, mdDirectoryName }) { // Props optio
         {/*   {/* Or use navigate: <button onClick={() => navigate(-1)}>← Back</button> for true browser back */}
         {/* </div> */}
         <div id={'postContent'} className={style.markdown}>
-          <h1>{selectedPost.title}</h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-8 pb-6 border-b border-slate-200">{selectedPost.title}</h1>
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{selectedPost.content}</ReactMarkdown>
         </div>
         <Footer />
@@ -74,31 +74,34 @@ export function FileDisplay({ directoryName, mdDirectoryName }) { // Props optio
   }
 
   return (
-    <>
-      <div>
-        {posts.length === 0 && <p>No posts found.</p>}
-        {posts.map((post) => (
-          <Link // Wrap div in Link for navigation
-            key={post.slug}
-            to={`./${post.slug}`} // Relative: /directory/mdDirectory/my-slug
-            style={{ textDecoration: 'none' }} // Prevent underline
-          >
-            <div
-              style={{
-                border: '1px solid #ccc',
-                margin: '10px',
-                padding: '15px',
-                borderRadius: '8px',
-                cursor: 'pointer',
-              }}
+    <div className="flex flex-col min-h-[calc(100vh-4rem)] bg-slate-50">
+      <div className="flex-grow max-w-4xl mx-auto w-full py-12 px-4 sm:px-6 lg:px-8">
+        {posts.length === 0 && (
+          <div className="text-center py-20 bg-white rounded-2xl shadow-sm border border-slate-200">
+            <p className="text-lg text-slate-500 font-medium">No posts found.</p>
+          </div>
+        )}
+        <div className="space-y-6">
+          {posts.map((post) => (
+            <Link // Wrap div in Link for navigation
+              key={post.slug}
+              to={`./${post.slug}`} // Relative: /directory/mdDirectory/my-slug
+              className="block group" // Prevent underline
             >
-              <h2 style={{ margin: '0 0 5px 0' }}>{post.title}</h2>
-              <p style={{ margin: 0, color: '#666' }}>{post.date}</p>
-            </div>
-          </Link>
-        ))}
+              <div className="bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-sm group-hover:shadow-md group-hover:border-blue-300 group-hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer">
+                <h2 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">{post.title}</h2>
+                <div className="flex items-center text-sm font-medium text-slate-500">
+                  <svg className="mr-2 h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  {post.date}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

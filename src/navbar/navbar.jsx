@@ -20,7 +20,7 @@ export function Navbar() {
     <Disclosure
       as="nav"
       /* Changed bg-gray-800/50 to bg-slate-900/80 for a richer navy */
-      className="relative bg-slate-900/80 backdrop-blur-md after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
+      className="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10 shadow-sm"
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
