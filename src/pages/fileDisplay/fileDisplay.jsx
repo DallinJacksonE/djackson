@@ -1,5 +1,4 @@
-import React from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom'; // Add these
+import { useParams, Link } from 'react-router-dom'; // Add these
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -8,7 +7,6 @@ import { Footer } from '../footer/footer';
 
 export function FileDisplay({ directoryName, mdDirectoryName }) { // Props optional now (URL overrides)
   const params = useParams(); // Grabs :directory, :mdDirectory, :slug from URL
-  const navigate = useNavigate();
   const directory = params.directory || directoryName;
   const mdDirectory = params.mdDirectory || mdDirectoryName;
   const slug = params.slug; // If present, we're in detail mode
@@ -47,23 +45,6 @@ export function FileDisplay({ directoryName, mdDirectoryName }) { // Props optio
   if (selectedPost) {
     return (
       <div id={'postContainer'}>
-        {/* <div id={'buttonContainer'}> */}
-        {/*   <Link */}
-        {/*     to=".." // Relative: goes up to /directory/mdDirectory (list) */}
-        {/*     style={{ */}
-        {/*       marginBottom: '20px', */}
-        {/*       cursor: 'pointer', */}
-        {/*       border: '1px solid #ccc', */}
-        {/*       borderRadius: '6px', */}
-        {/*       padding: '3px', */}
-        {/*       textDecoration: 'none', // Style as button */}
-        {/*     }} */}
-        {/*     id={'backPostButton'} */}
-        {/*   > */}
-        {/*     ← Back */}
-        {/*   </Link> */}
-        {/*   {/* Or use navigate: <button onClick={() => navigate(-1)}>← Back</button> for true browser back */}
-        {/* </div> */}
         <div id={'postContent'} className={style.markdown}>
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-8 pb-6 border-b border-slate-200">{selectedPost.title}</h1>
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{selectedPost.content}</ReactMarkdown>
