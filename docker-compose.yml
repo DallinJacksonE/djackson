@@ -1,0 +1,7 @@
+services:
+  djackson-dev:
+    build: .
+    container_name: djackson.dev
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
